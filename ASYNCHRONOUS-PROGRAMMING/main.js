@@ -166,4 +166,4 @@ async function joinCohort(student) {
   }
 }
 
-joinCohort("Soliu");
+joinCohort("Mr Focus");
