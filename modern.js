@@ -54,3 +54,28 @@ class Student {
 
 const soliu = new Student("Soliu", "JavaScript");
 soliu.introduce();
+
+
+// Mini Practice Project: “Student Profile”
+class Student {
+  constructor(name, course) {
+    this.name = name;
+    this.course = course;
+  }
+
+  saveProfile() {
+    const data = JSON.stringify(this);
+    localStorage.setItem("profile", data);
+    console.log("Profile saved!");
+  }
+
+  static loadProfile() {
+    const data = JSON.parse(localStorage.getItem("profile"));
+    console.log(`Welcome back, ${data.name}! You’re learning ${data.course}.`);
+  }
+}
+
+const students = new Student("Soliu", "JavaScript");
+students.saveProfile();
+
+Student.loadProfile();
