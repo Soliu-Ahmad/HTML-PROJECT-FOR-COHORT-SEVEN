@@ -1,0 +1,293 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #eef2f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1 1 40%;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  border-color: #007bff;
+}
+
+form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+button.cancel {
+  background-color: #999;
+}
+
+button.cancel:hover {
+  background-color: #666;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Search & Sort */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.controls input,
+.controls select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fafafa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+td button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 8px;
+  cursor: pointer;
+  margin: 0 3px;
+  transition: all 0.3s ease;
+}
+
+td button:hover {
+  opacity: 0.9;
+}
+
+td button.delete {
+  background-color: #dc3545;
+}
+
+#stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ===========================
+   📱 Responsive Design
+=========================== */
+
+/* Small screens (phones, <576px) */
+@media (max-width: 575.98px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form input,
+  form button {
+    flex: 1 1 100%;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  #stats {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+}
+
+/* Medium screens (tablets, 576px - 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    width: 95%;
+    padding: 25px;
+  }
+
+  form input {
+    flex: 1 1 45%;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #stats {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+/* Large screens (desktops, 768px - 1200px) */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .container {
+    width: 85%;
+  }
+}
+
+/* Extra-large screens (1200px and above) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+/* Ultra small screens (below 400px) */
+@media (max-width: 400px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  form input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  form button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .controls input,
+  .controls select {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 6px;
+  }
+
+  td button {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+
+  #stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}

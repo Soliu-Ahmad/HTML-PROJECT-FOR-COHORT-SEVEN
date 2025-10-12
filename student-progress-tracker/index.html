@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Progress Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Student Progress Tracker</h1>
+
+    <!-- Input Form -->
+    <form id="studentForm">
+      <input type="text" id="name" placeholder="Student name" required />
+      <input type="number" id="score" placeholder="Score (0–100)" required />
+      <button type="submit" id="submitBtn">Add Student</button>
+      <button type="button" id="updateBtn" class="hidden">Update</button>
+      <button type="button" id="cancelBtn" class="hidden cancel">Cancel</button>
+    </form>
+
+    <!-- Search and Sort Controls -->
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search by name..." />
+      <select id="sortSelect">
+        <option value="">Sort By</option>
+        <option value="name-asc">Name (A–Z)</option>
+        <option value="name-desc">Name (Z–A)</option>
+        <option value="score-asc">Score (Low–High)</option>
+        <option value="score-desc">Score (High–Low)</option>
+      </select>
+    </div>
+
+    <!-- Statistics -->
+    <div id="stats">
+      <p>Total Students: <span id="total">0</span></p>
+      <p>Average Score: <span id="average">0</span></p>
+      <p>Top Performer: <span id="top">N/A</span></p>
+    </div>
+
+    <!-- Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Score</th>
+          <th>Grade</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="studentList"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
