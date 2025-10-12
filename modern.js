@@ -5,7 +5,6 @@ function greet(name) {
 
 // Arrow function
 const greetArrow = (name) => "Hello " + name;
-
 console.log(greet("Soliu"));
 console.log(greetArrow("DLT Africa"));
 

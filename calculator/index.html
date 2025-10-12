@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="calculator.png" type="image/png">
+    <title>Calc</title>
+</head>
+<body>
+    <section class="container">
+        <form>
+            <input type="text" name="" id="screen" readonly>
+        </form>
+
+        <div class="buttons">
+            <button type="button" class="bttn yellow" onclick="appendToDisplay('/')">/</button>
+            <button type="button" class="bttn yellow" onclick="appendToDisplay('-')">-</button>
+            <button type="button" class="bttn yellow" onclick="appendToDisplay('*')">*</button>
+            <button type="button" class="bttn yellow" onclick="appendToDisplay('+')">+</button>
+            <button type="button" class="bttn grey" onclick="appendToDisplay('9')">9</button>
+            <button type="button" class="bttn grey" onclick="appendToDisplay('8')">8</button>
+            <button type="button" class="bttn grey"
+            onclick="appendToDisplay('7')">7</button>
+            <button type="button" class="bttn grey" onclick="appendToDisplay('6')">6</button>
+            <button type="button" class="bttn grey" onclick="appendToDisplay('5')">5</button>
+            <button type="button" class="bttn grey" onclick="appendToDisplay('4')">4</button>
+            <button type="button" class="bttn grey" onclick="appendToDisplay('3')">3</button>
+            <button type="button" class="bttn grey" onclick="appendToDisplay('2')">2</button>
+            <button type="button" class="bttn grey" onclick="appendToDisplay('1')">1</button>
+            <button type="button" class="bttn grey" onclick="appendToDisplay('0')">0</button>
+            <button type="button" class="bttn grey" onclick="appendToDisplay('.')">.</button>
+            <button type="button" class="bttn green" onclick="calculate('=')">=</button>
+            <button type="button" class="bttn red" onclick="clearDisplay('c')">C</button>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
